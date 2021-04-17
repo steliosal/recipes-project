@@ -7,6 +7,7 @@ export default function Home() {
     <Layout>
       <h1> Home Page </h1>
       <h2>Git testing</h2>
+      <h3>Git learning branching</h3>
     </Layout>
   )
 }
