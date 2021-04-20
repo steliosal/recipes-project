@@ -9,6 +9,9 @@ export default function Home() {
       <h2>Git testing</h2>
       <h3>getting better and better</h3>
       <h2>hello source tree</h2>
+
+      <h3>getting better and better</h3>
+      <h2>hello source tree</h2>
     </Layout>
   )
 }
