@@ -4,6 +4,12 @@ body {
     background: rgb(142, 226, 247);
 }
 
-h1{
-    color:brown
+
+
+.home-heading {
+    color:blue
+}
+
+.about-heading {
+    color:rgb(88, 204, 169)
 }
