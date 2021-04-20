@@ -10,6 +10,7 @@ export default function Home() {
       <h3>getting better and better</h3>
       <h2>hello source tree</h2>
       <h2>git ignore learing</h2>
+      <h2>I want to learn about branches</h2>
     </Layout>
   )
 }
