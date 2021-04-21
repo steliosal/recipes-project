@@ -441,7 +441,7 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--black);
+  background:rgb(74, 163, 223);
   color: var(--white);
 }
 .page-footer h5 {
