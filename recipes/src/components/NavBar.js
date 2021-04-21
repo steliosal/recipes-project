@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FiAlignJustify } from "react-icons/fi"
 
 const NavBar = () => {
   return (
     <nav>
+      <FiAlignJustify size="2rem" />
       <ul>
         <li>
           <Link to="/">Home</Link>
