@@ -1,20 +1,21 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 const query = graphql`
   {
     allFile(filter: { extension: { ne: "svg" } }) {
       nodes {
-        name
         childImageSharp {
           gatsbyImageData(
             layout: FIXED
             placeholder: BLURRED
-            transformOptions: { grayscale: true }
             width: 200
+            height: 200
           )
         }
+        name
       }
     }
   }
@@ -22,12 +23,38 @@ const query = graphql`
 
 const Gallery = () => {
   const data = useStaticQuery(query)
-  console.log(data)
+  const nodes = data.allFile.nodes
   return (
-    <div>
-      <h2>simple image gallery</h2>
-    </div>
+    <Wrapper>
+      {nodes.map((image, index) => {
+        const { name } = image
+        const pathToImage = getImage(image)
+        return (
+          <article key={index} className="item">
+            <GatsbyImage
+              image={pathToImage}
+              alt={name}
+              className="gallery-img"
+            />
+            <p>{name}</p>
+          </article>
+        )
+      })}
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    margin-right: 1rem;
+
+    .gallery-img {
+      border-radius: 1rem;
+    }
+  }
+`
 
 export default Gallery

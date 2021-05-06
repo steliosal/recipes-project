@@ -1,3 +1,7 @@
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -21,6 +25,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId:  `pti9iihmu2yh`,
+        accessToken:`ON_HRxL2S_FKvZkJ0bszw_W9tDKS-6EoP7cq1grVXek`,
       },
     },
   ],
