@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+=======
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
+>>>>>>> parent of 3496848... Delete gatsby-config.js
 
 
 
